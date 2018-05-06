@@ -1,0 +1,33 @@
+body {
+    background-image: url("/img/theater.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+
+}
+
+.container {
+    padding: 10px;
+}
+
+.navbar-nav {
+    display: inline-block;
+  }
+  
+  .navbar-nav>li {
+     display: inline-block;
+     padding: 0 10px;
+  }
+  a.nav-link {
+    text-align: center;
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  a:hover.nav-link {
+    color: gray;
+}
+h1, h2, h3, #movies, #reviews {
+    text-align: center;
+    color:white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}

@@ -1,0 +1,11 @@
+<h2>Click the movie title to add a review:</h2>
+<hr/>
+{{#each data}}
+<h3 data-id='{{id}}'>{{headline}}</h3>
+{{!-- {{link}}<br/> --}}
+<a href={{link}}>Get Showtimes</a><br>
+{{summary}}<br/>
+<button data-id='{{_id}}' id='savemovie'>Save Movie</button><br/>
+<hr/>
+{{/each}}
+
