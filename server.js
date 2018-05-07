@@ -85,7 +85,6 @@ app.get("/saved", function (req, res) {
 app.get("/scrape", function (req, res) {
   // let's empty out the movies so we do not have any duplicates
   db.movie.remove().exec();
-  // let's see what is happening in the baseball world today
   axios("https://www.amctheatres.com/movies").then(function (response) {
     var $ = cheerio.load(response.data);
     // go to the first parent
@@ -94,9 +93,9 @@ app.get("/scrape", function (req, res) {
       var newmovie = {};
       // get the URL
       newmovie.link = 'https://www.amctheatres.com' + $(element).children('a').attr('href');
-      // get the headline
+      // get the movie title
       newmovie.headline = $(element).children('h3').text();
-      // get the summary
+      // get the release date
       newmovie.summary = $(element).children('div').children('p').children("span:last-of-type").text();
 
       // insert the movie into the db
